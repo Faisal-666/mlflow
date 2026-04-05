@@ -39,7 +39,7 @@ jobs:
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
-          git remote set-url origin https://x-access-token:${{ secrets.GH_PAT }}@github.com/${{ secrets.USERNAME }}/mlflow.git
+          git remote set-url origin https://x-access-token:${{ secrets.GH_PAT }}@github.com/Faisal-666/mlflow.git
           git add mlruns/
           git commit -m "save mlruns from CI run"
           git push origin main
