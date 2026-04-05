@@ -47,6 +47,7 @@ jobs:
           git lfs track 'mlruns/**'
           git add .gitattributes
           git commit -m 'tracking large files in mlruns with git lfs' || true
+          git remote set-url origin https://${{ secrets.GH_PAT }}@github.com/${{ secrets.USERNAME }}/mlflow.git
           git push origin main
 
       - name: Save models to GH repo
